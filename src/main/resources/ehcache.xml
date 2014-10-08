@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ehcache name="DemoCache">
+    <diskStore path="t_cache"/>
+    <defaultCache
+            maxElementsInMemory="100"
+            eternal="true"
+            timeToIdleSeconds="0"
+            timeToLiveSeconds="17280000"
+            overflowToDisk="true"
+            diskSpoolBufferSizeMB="30"
+            maxElementsOnDisk="10000000"
+            diskPersistent="true"
+            diskExpiryThreadIntervalSeconds="720"
+            memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="test"
+           maxElementsInMemory="100"
+           maxElementsOnDisk="10000000"
+           eternal="true"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="17280000"
+           overflowToDisk="true"
+           diskSpoolBufferSizeMB="30"
+           diskPersistent="true"
+           diskExpiryThreadIntervalSeconds="720"
+           memoryStoreEvictionPolicy="LFU">
+    </cache>
+
+</ehcache>
